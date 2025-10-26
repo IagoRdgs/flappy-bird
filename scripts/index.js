@@ -73,7 +73,7 @@ function Passaro(alturaJogo) {
     this.alturaJogo = alturaJogo;
 
     this.elemento = novoElemento('img', 'passaro');
-    this.elemento.src = '/assets/passaro.png';
+    this.elemento.src = 'assets/passaro.png';
 
     this.getY = () => parseInt(this.elemento.style.bottom.split('px')[0]);
     this.setY = y => this.elemento.style.bottom = `${y}px`;

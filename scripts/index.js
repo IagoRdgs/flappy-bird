@@ -136,8 +136,10 @@ function handleButtonGame(e, colidiu = false) {
     e.preventDefault();
     const areaDoJogo = document.querySelector('[wm-flappy]');
 
-    if (colidiu)
-        areaDoJogo.innerHTML = '';
+    if (colidiu) {
+        const elementosJogo = areaDoJogo.querySelectorAll(':not(.buttonGame)');
+        elementosJogo.forEach(el => el.remove());
+    }
 
     e.target.style.display = 'none';
     new FlappyBird().start();
